@@ -48,24 +48,24 @@
 - [Operators - w3schools](https://www.w3schools.com/python/python_operators.asp)
 - [while - w3schools][w3while]
 
-[git_repo_tutorial]: https://github.com/niklas-hjelm/Programmering-med-C-Sharp/blob/main/assets/newRepo.md
+[git_repo_tutorial]: https://github.com/niklas-hjelm/Programmering-med-C-Sharp/blob/master/assets/newRepo.md
 [w3while]: https://www.w3schools.com/python/python_while_loops.asp
 [w3var]: https://www.w3schools.com/python/python_variables.asp
 [w3input]: https://www.w3schools.com/python/python_user_input.asp
 
 ## Lecture notes :mortar_board:
-- [Input-output, variables](https://github.com/pr0fez/AI24-Programmering/blob/main/Lecture_notes/L0-input-output.ipynb)
-- [if-statement](https://github.com/pr0fez/AI24-Programmering/blob/main/Lecture_notes/L1-if-statements.ipynb)
-- [while loop](https://github.com/pr0fez/AI24-Programmering/blob/main/Lecture_notes/L2-while-statement.ipynb)
+- [Input-output, variables](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L0-input-output.ipynb)
+- [if-statement](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L1-if-statements.ipynb)
+- [while loop](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L2-while-statement.ipynb)
 
 ## Exercises :running:
 - [Count with Python][exercise_count]
 - [if statement][exercise_if]
 - [while statement][exercise_while]
 
-[exercise_count]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/00-Count-with-Python-exercise.ipynb
-[exercise_if]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/01-if-statement-exercise.ipynb 
-[exercise_while]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/02-while-statement-exercise.ipynb
+[exercise_count]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/00-Count-with-Python-exercise.ipynb
+[exercise_if]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/01-if-statement-exercise.ipynb 
+[exercise_while]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/02-while-statement-exercise.ipynb
 
 ## Lab 1
 - Work with lab 1 Github

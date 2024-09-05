@@ -27,6 +27,6 @@
 ## Exercises :running:
 
 - [OOP basics][OOP_exer]
-- [OOP inheritance and polymorphism](https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/E12-OOP-inheritance_polymorphism.ipynb)
+- [OOP inheritance and polymorphism](https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/E12-OOP-inheritance_polymorphism.ipynb)
 
-[OOP_exer]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/E11-OOP-basic-exercise.ipynb
+[OOP_exer]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/E11-OOP-basic-exercise.ipynb

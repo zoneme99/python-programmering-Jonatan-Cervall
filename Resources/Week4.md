@@ -12,10 +12,10 @@
 - [NumPy array creation - documentation](https://numpy.org/devdocs/user/basics.creation.html)
 
 ## Lecture notes :mortar_board:
-- [NumPy lec note](https://github.com/pr0fez/AI24-Programmering/blob/main/Lecture_notes/Lec10-numpy.ipynb)
+- [NumPy lec note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/Lec10-numpy.ipynb)
 
 ## Exercises :running:
-- [NumPy exercises](https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/E10-numpy.ipynb)
+- [NumPy exercises](https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/E10-numpy.ipynb)
 
 ## Lab 2
 - work on lab 2

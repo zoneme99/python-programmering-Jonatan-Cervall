@@ -44,10 +44,10 @@
 [real_pipenv]: https://realpython.com/pipenv-guide/
 
 ## Lecture notes :mortar_board:
-- [for loop](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L3-for-statement.ipynb)
-- [lists](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L4-lists.ipynb)
-- [strings](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L5-strings.ipynb)
-- [functions](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L6-functions.ipynb)
+- [for loop](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L3-for-statement.ipynb)
+- [lists](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L4-lists.ipynb)
+- [strings](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L5-strings.ipynb)
+- [functions](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L6-functions.ipynb)
 
 
 ## Exercises :running:
@@ -57,12 +57,12 @@
 - [functions][func_exercise] 
 - [exception][except_exer]
 
-[except_exer]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/07-exception-exercise.ipynb
+[except_exer]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/07-exception-exercise.ipynb
 
-[str_exercise]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/05-strings-exercise.ipynb
+[str_exercise]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/05-strings-exercise.ipynb
 
-[func_exercise]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/06-functions-exericse.ipynb
+[func_exercise]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/06-functions-exericse.ipynb
 
-[exercise_for]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/03-for-statement-exercise.ipynb
+[exercise_for]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/03-for-statement-exercise.ipynb
 
-[exercise_list]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/04-list-exercise.ipynb
+[exercise_list]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/04-list-exercise.ipynb

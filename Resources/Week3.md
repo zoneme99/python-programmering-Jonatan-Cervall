@@ -25,17 +25,17 @@
 
 ## Lecture notes :mortar_board:
 
-- [file handling - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L8-file-handling.ipynb)
-- [dictionary - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L9-dictionary.ipynb)
-- [exceptions](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/L7-error-handling.ipynb)  
+- [file handling - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L8-file-handling.ipynb)
+- [dictionary - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L9-dictionary.ipynb)
+- [exceptions](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L7-error-handling.ipynb)  
 
 ## Exercises :running:
 - [file handling - exercise][file_exer]
 - [dictionary - exercise][dict_exer]
 
-[file_exer]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/08-file-handling.ipynb
+[file_exer]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/08-file-handling.ipynb
 
-[dict_exer]: https://github.com/pr0fez/AI24-Programmering/blob/main/Exercises/09-dictionary-exercises.ipynb
+[dict_exer]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/09-dictionary-exercises.ipynb
 
 ## Lab 2
 - deadline week 37 friday :hourglass_flowing_sand:

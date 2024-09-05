@@ -19,8 +19,8 @@
 
 ## Lecture notes :mortar_board:
 
-- [Matplotlib](https://github.com/pr0fez/AI24-Programmering/blob/main/Lectures/Lec15-Matplotlib.ipynb)
-- [Unit testing](https://github.com/pr0fez/AI24-Programmering/tree/main/Lectures/Lec14-unit%20testing)
+- [Matplotlib](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/Lec15-Matplotlib.ipynb)
+- [Unit testing](https://github.com/pr0fez/AI24-Programmering/tree/master/Lectures/Lec14-unit%20testing)
 
 ## Exercises :running:
 
