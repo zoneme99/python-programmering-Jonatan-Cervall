@@ -53,11 +53,6 @@
 [w3var]: https://www.w3schools.com/python/python_variables.asp
 [w3input]: https://www.w3schools.com/python/python_user_input.asp
 
-## Lecture notes :mortar_board:
-- [Input-output, variables](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L0-input-output.ipynb)
-- [if-statement](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L1-if-statements.ipynb)
-- [while loop](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L2-while-statement.ipynb)
-
 ## Exercises :running:
 - [Count with Python][exercise_count]
 - [if statement][exercise_if]
