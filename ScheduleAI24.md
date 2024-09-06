@@ -1,6 +1,6 @@
 # Schema - Programmering med Python (AI24)
 
-| Vecka |     Måndag      |          Torsdag    (distans)      |          Fredag           |    Deadlines   |
+| Vecka |     Tisdag      |          Torsdag    (distans)      |          Fredag           |    Deadlines   |
 | :---: | :----------------------: | :----------------------: | :-----------------------: | :-------------: |
 |  37   | 9-11:45 F <br>13:15-15 S | 9-11:45 F <br>13:15-15 S | 9-11:45 F <br>13:15-15 S  |                 |
 |  38   | 9-11:45 F <br>13:15-15 S | 9-11:45 S <br>13:15-15 S | 9-11:45 F <br>13:15-15 S  | Labb 1 (fredag) |
