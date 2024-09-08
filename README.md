@@ -25,8 +25,6 @@ For detailed schedule [click here][time_sched]
 [w4]: https://github.com/pr0fez/AI24-Programmering/blob/master/Resources/Week4.md
 [w5]: https://github.com/pr0fez/AI24-Programmering/blob/master/Resources/Week5.md
 [w6]: https://github.com/pr0fez/AI24-Programmering/blob/master/Resources/Week6.md
-[w7]: https://github.com/pr0fez/AI24-Programmering/blob/master/Resources/Week7.md
-[w8]: https://github.com/pr0fez/AI24-Programmering/blob/master/Resources/Week8.md
 
 ## Resources
 

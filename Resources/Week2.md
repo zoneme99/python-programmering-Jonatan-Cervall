@@ -6,7 +6,7 @@
 - Learn [for statement][for_video] to efficiently repeat code
 - Learn [lists][lists_video] for organizing data
 - Learn [list comprehension][list_comp_vid] for efficient and clean code
-- Learn [pipenv][pipenv] to manage packages and environments
+- Learn [venv][venv] to manage packages and environments
 - Learn [matplotlib][matplot_video] to plot graphs
 - Learn [functions][func_vid] to organize and reuse code
 - Learn [strings][string_vid] to work with text
@@ -21,7 +21,7 @@
 
 [for_video]: https://www.youtube.com/watch?v=OnDr4J2UXSA
 
-[pipenv]: https://www.youtube.com/watch?v=6Qmnh5C4Pmo
+[venv]: fixme
 
 [lists_video]: https://www.youtube.com/watch?v=ohCDWZgNIU0&list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-&index=14
 
@@ -29,7 +29,6 @@
 
 
 ## Theory
-- [pipenv - Real Python][real_pipenv]
 - [for - w3schools][w3for]
 - [list - w3schools][w3list]
 - [matplotlib - w3schools][w3matplot]
@@ -41,7 +40,7 @@
 [w3matplot]: https://www.w3schools.com/python/matplotlib_intro.asp
 [w3list]: https://www.w3schools.com/python/python_lists.asp
 [w3for]: https://www.w3schools.com/python/python_for_loops.asp
-[real_pipenv]: https://realpython.com/pipenv-guide/
+
 
 ## Lecture notes :mortar_board:
 - [for loop](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L3-for-statement.ipynb)
