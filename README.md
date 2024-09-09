@@ -1,3 +1,10 @@
+# Fork av AI24-Programmering
+### Kursanteckningar med mina egna som jag regelbundet uppdaterar. Dett möjligör att jag kan jobba på *två datorer* från samma repository!
+> Nedan är original READ.md filen!
+---
+---
+---
+
 # Programmering med Python (AI22)
 
 This is a fundamental Python course with focus of learning important programming concepts in order to solve various problems by writing Python programs. All materials including lecture notes, code-along, exercises and resource links can be found in the course [Github repo][ghr].
