@@ -25,9 +25,9 @@
 
 ## Lecture notes :mortar_board:
 
-- [file handling - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L8-file-handling.ipynb)
-- [dictionary - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L9-dictionary.ipynb)
-- [exceptions](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L7-error-handling.ipynb)  
+- [file handling - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L8-file-handling.ipynb)
+- [dictionary - lecture note](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L9-dictionary.ipynb)
+- [exceptions](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L7-error-handling.ipynb)  
 
 ## Exercises :running:
 - [file handling - exercise][file_exer]

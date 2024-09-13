@@ -43,10 +43,10 @@
 
 
 ## Lecture notes :mortar_board:
-- [for loop](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L3-for-statement.ipynb)
-- [lists](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L4-lists.ipynb)
-- [strings](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L5-strings.ipynb)
-- [functions](https://github.com/pr0fez/AI24-Programmering/blob/master/Lectures/L6-functions.ipynb)
+- [for loop](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L3-for-statement.ipynb)
+- [lists](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L4-lists.ipynb)
+- [strings](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notess/L5-strings.ipynb)
+- [functions](https://github.com/pr0fez/AI24-Programmering/blob/master/Lecture_notes/L6-functions.ipynb)
 
 
 ## Exercises :running:
