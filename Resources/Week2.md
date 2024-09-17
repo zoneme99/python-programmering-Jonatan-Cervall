@@ -1,5 +1,6 @@
 # Week 38 - Resources
 
+
 [Back to main page :house:](https://github.com/pr0fez/AI24-Programmering)
 
 ## Video guides :video_camera:
