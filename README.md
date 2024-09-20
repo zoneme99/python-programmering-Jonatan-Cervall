@@ -4,6 +4,8 @@ This is a fundamental Python course with focus of learning important programming
 
 [ghr]: https://github.com/pr0fez/AI24-Programmering
 
+
+
 ## Schedule
 
 For detailed schedule [click here][time_sched]
