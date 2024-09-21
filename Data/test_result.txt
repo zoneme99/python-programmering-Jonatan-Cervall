@@ -18,6 +18,7 @@ Gore Bord 55
 Jakob Kallander 65
 Fredrika Ulven 10
 
+Sorted alphabetical order:
 Adam Gustafsson 25
 Björn Björnsson 39
 Bose Bosseson 32
@@ -38,3 +39,29 @@ Ove Karlsten 41
 Sven Erik Karlsson 13
 Sven Erik Lundin 39
 
+Sorted grade order:
+Grade: F
+Fredrika Ulven 10
+Sven Erik Karlsson 13
+Grade: E
+Emil Johansson 23
+Ida Håkansson 23
+Hanna Karlsson 23 
+Håkan Håkanson 24
+Adam Gustafsson 25
+Grade: D
+Jonas Jonasson 31
+Erik Eriksson 31
+Emma Boden 32
+Karl Karlsson 32
+Bose Bosseson 32
+Sven Erik Lundin 39
+Björn Björnsson 39
+Grade: C
+Ove Karlsten 41
+Ella Ester 41
+Johan Johansson 42
+Grade: B
+Gore Bord 55
+Grade: A
+Jakob Kallander 65
