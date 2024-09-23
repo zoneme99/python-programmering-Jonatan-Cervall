@@ -18,4 +18,4 @@
 - [NumPy exercises](https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/E10-numpy.ipynb)
 
 ## Lab 2
-- work on lab 2
+- deadline week 40 friday :hourglass_flowing_sand:
