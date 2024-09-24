@@ -27,6 +27,8 @@ def distance(dataframe,x,y):
     tempdf = np.sqrt(np.pow(x,2) - np.pow(dataframe["width (cm)"]), 2) + np.pow(y,2) - np.pow(dataframe["height (cm)"],2)
     return tempdf
 
+#gör en copy av df och elementvis subtrahera och kvadrera värderna. Därefter addera och ta roten ur på copy df
+
 
 dist = list(map(distance, df, finedata[0], finedata[1]))
 print(dist)
