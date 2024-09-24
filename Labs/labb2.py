@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import re
 
 df = pd.read_csv("Labs/datapoints.csv")
-print(df)
 
 colors = {1: 'blue', 0: 'orange'}
 color_list = [colors[group] for group in df['(0-pichu 1-pikachu)']]
@@ -24,12 +23,12 @@ for data in testdata:
     y = float(temp[1])
     finedata.append([x,y])
 
-def distance(x,y, dataframe):
+def distance(dataframe,x,y):
     tempdf = np.sqrt(np.pow(x,2) - np.pow(dataframe["width (cm)"]), 2) + np.pow(y,2) - np.pow(dataframe["height (cm)"],2)
     return tempdf
-    
-func = np.vectorize(distance)
-print(func(finedata[0], df))
 
+
+dist = list(map(distance, df, finedata[0], finedata[1]))
+print(dist)
 
 plt.show()
