@@ -23,14 +23,17 @@ for data in testdata:
     y = float(temp[1])
     finedata.append([x,y])
 
-def distance(dataframe,x,y):
-    tempdf = np.sqrt(np.pow(x,2) - np.pow(dataframe["width (cm)"]), 2) + np.pow(y,2) - np.pow(dataframe["height (cm)"],2)
-    return tempdf
+def term(testpoint, testx):
+    res = np.pow(testpoint - testx,2)
+    return res  
 
+ndf = pd.DataFrame
+ndf["x"] = df["width (cm)"].map(term,finedata[0])
+print(ndf["x"])
 #gör en copy av df och elementvis subtrahera och kvadrera värderna. Därefter addera och ta roten ur på copy df
 
 
-dist = list(map(distance, df, finedata[0], finedata[1]))
-print(dist)
+#dist = list(map(distance, df, finedata[0], finedata[1]))
+#print(dist)
 
 plt.show()
