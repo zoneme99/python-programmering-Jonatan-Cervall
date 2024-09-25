@@ -23,13 +23,22 @@ for data in testdata:
     y = float(temp[1])
     finedata.append([x,y])
 
-def term(testpoint, testx):
-    res = np.pow(testpoint - testx,2)
-    return res  
 
-ndf = pd.DataFrame
-ndf["x"] = df["width (cm)"].map(term,finedata[0])
-print(ndf["x"])
+testpoints = list()
+tempheight = list()
+for data in finedata:
+    testwidth = np.array(list(map(lambda x: np.pow(x - data[0], 2), df["width (cm)"])))
+    break
+print(testwidth)
+
+#testcopy = list()
+#for _ in range(len(df["width (cm)"])):
+#    testcopy.append(finedata[0])
+
+
+#ndf = df
+#ndf["width (cm)"] = df["width (cm)"].map(term,finedata[0])
+#print(ndf["x"])
 #gör en copy av df och elementvis subtrahera och kvadrera värderna. Därefter addera och ta roten ur på copy df
 
 
