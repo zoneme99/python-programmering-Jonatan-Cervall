@@ -23,26 +23,23 @@ for data in testdata:
     y = float(temp[1])
     finedata.append([x,y])
 
-
-
+point_index = list()
 for data in finedata:
     testwidth = np.array(list(map(lambda x: np.pow(x - data[0], 2), df["width (cm)"])))
     testheight = np.array(list(map(lambda x: np.pow(x - data[1], 2), df["height (cm)"])))
-    break
-print(testheight)
-
-#testcopy = list()
-#for _ in range(len(df["width (cm)"])):
-#    testcopy.append(finedata[0])
+    distance = np.sqrt(np.add(testwidth, testheight))
+    point_index.append(np.argmin(distance))
 
 
-#ndf = df
-#ndf["width (cm)"] = df["width (cm)"].map(term,finedata[0])
-#print(ndf["x"])
-#gör en copy av df och elementvis subtrahera och kvadrera värderna. Därefter addera och ta roten ur på copy df
+pokemons = [df["(0-pichu 1-pikachu)"][index] for index in point_index]
+
+colors = {1: 'green', 0: 'red'}
+color_list = [colors[group] for group in pokemons]
+
+x = [data[0] for data in finedata]
+y = [data[1] for data in finedata]
+plt.scatter(x, y, c = color_list)
 
 
-#dist = list(map(distance, df, finedata[0], finedata[1]))
-#print(dist)
 
 plt.show()
