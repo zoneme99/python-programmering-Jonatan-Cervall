@@ -23,6 +23,12 @@ for data in testdata:
     y = float(temp[1])
     finedata.append([x,y])
 
+def edistance(xwid, yhei , widlist, heilist):
+    width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
+    height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
+    distance = np.sqrt(np.add(width, height))
+    return np.argmin(distance)
+
 point_index = list()
 for data in finedata:
     testwidth = np.array(list(map(lambda x: np.pow(x - data[0], 2), df["width (cm)"])))
@@ -40,6 +46,32 @@ x = [data[0] for data in finedata]
 y = [data[1] for data in finedata]
 plt.scatter(x, y, c = color_list)
 
+for index, data in enumerate(finedata):
+    print("Sample with (width, height): ({data0}, {data1}) classified as {pokemon}".format(data0 = data[0], data1 = data[1], pokemon = "Pikachu" if df["(0-pichu 1-pikachu)"][point_index[index]] == 1 else "Pichu"))
 
+while True:
+    try:
+        inpx = float(input("Insert width of pokemon: "))
+        if inpx >= 0:
+            break
+        else:
+            print("wrong input, negative values not allowed")
+    except ValueError:
+        print("wrong input, test again")
+
+while True:
+    try:
+        inpy = float(input("Insert width of pokemon: "))
+        if inpy >= 0:
+            break
+        else:
+            print("wrong input, negative values not allowed")
+    except ValueError:
+        print("wrong input, test again")
+
+indexpoint = edistance(inpx, inpy, df["width (cm)"], df["height (cm)"])
+
+print("IT IS A {pokemon}".format(pokemon = "Pikachu" if df["(0-pichu 1-pikachu)"][indexpoint] == 1 else "Pichu"))
+plt.scatter(inpx, inpy, c = "black")
 
 plt.show()
