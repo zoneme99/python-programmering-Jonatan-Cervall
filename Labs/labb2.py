@@ -24,12 +24,12 @@ for data in testdata:
     finedata.append([x,y])
 
 
-testpoints = list()
-tempheight = list()
+
 for data in finedata:
     testwidth = np.array(list(map(lambda x: np.pow(x - data[0], 2), df["width (cm)"])))
+    testheight = np.array(list(map(lambda x: np.pow(x - data[1], 2), df["height (cm)"])))
     break
-print(testwidth)
+print(testheight)
 
 #testcopy = list()
 #for _ in range(len(df["width (cm)"])):
