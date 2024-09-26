@@ -10,10 +10,17 @@
 # a = sorted(a)
 # print(a)
 
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
+# import numpy as np
+
+# x = np.arange(10)
+# y = np.multiply(np.multiply(2,np.log(x)), np.pow(x, 2)) 
+# plt.plot(x,y)
+# plt.show()
+
+import pandas as pd
 import numpy as np
 
-x = np.arange(10)
-y = np.multiply(np.multiply(2,np.log(x)), np.pow(x, 2)) 
-plt.plot(x,y)
-plt.show()
+x = pd.Series(np.array([15,5,30]), index = [x for x in range(3)])
+x = x.drop(np.argmin(x))
+print(x[2])

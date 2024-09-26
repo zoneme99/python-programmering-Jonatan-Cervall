@@ -31,10 +31,7 @@ def edistance(xwid, yhei , widlist, heilist):
 
 point_index = list()
 for data in finedata:
-    testwidth = np.array(list(map(lambda x: np.pow(x - data[0], 2), df["width (cm)"])))
-    testheight = np.array(list(map(lambda x: np.pow(x - data[1], 2), df["height (cm)"])))
-    distance = np.sqrt(np.add(testwidth, testheight))
-    point_index.append(np.argmin(distance))
+    point_index.append(edistance(data[0], data[1], df["width (cm)"], df["height (cm)"]))
 
 
 pokemons = [df["(0-pichu 1-pikachu)"][index] for index in point_index]
@@ -73,5 +70,15 @@ indexpoint = edistance(inpx, inpy, df["width (cm)"], df["height (cm)"])
 
 print("IT IS A {pokemon}".format(pokemon = "Pikachu" if df["(0-pichu 1-pikachu)"][indexpoint] == 1 else "Pichu"))
 plt.scatter(inpx, inpy, c = "black")
+
+def edistance10(xwid, yhei , widlist, heilist, label):
+    width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
+    height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
+    distance = pd.Series(np.sqrt(np.add(width, height)))
+    mean = list()
+    for _ in range(10):
+        mean.append([distance.argmin, distance[distance.argmin]])
+        distance.drop(distance.argmin) #BÖRJA HÄÄÄÄÄÄRRRRR
+    #return np.argmin(distance)
 
 plt.show()
