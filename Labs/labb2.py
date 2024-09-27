@@ -46,25 +46,31 @@ plt.scatter(x, y, c = color_list)
 for index, data in enumerate(finedata):
     print("Sample with (width, height): ({data0}, {data1}) classified as {pokemon}".format(data0 = data[0], data1 = data[1], pokemon = "Pikachu" if df["(0-pichu 1-pikachu)"][point_index[index]] == 1 else "Pichu"))
 
-while True:
-    try:
-        inpx = float(input("Insert width of pokemon: "))
-        if inpx >= 0:
-            break
-        else:
-            print("wrong input, negative values not allowed")
-    except ValueError:
-        print("wrong input, test again")
+print("Insert dimensions for pokemon(closest neighbor, black dot):")
 
-while True:
-    try:
-        inpy = float(input("Insert width of pokemon: "))
-        if inpy >= 0:
-            break
-        else:
-            print("wrong input, negative values not allowed")
-    except ValueError:
-        print("wrong input, test again")
+def inputs():
+    while True:
+        try:
+            inpx = float(input("Insert width of pokemon: "))
+            if inpx >= 0:
+                break
+            else:
+                print("wrong input, negative values not allowed")
+        except ValueError:
+            print("wrong input, test again")
+
+    while True:
+        try:
+            inpy = float(input("Insert height of pokemon: "))
+            if inpy >= 0:
+                break
+            else:
+                print("wrong input, negative values not allowed")
+        except ValueError:
+            print("wrong input, test again")
+    return inpx, inpy
+
+inpx, inpy = inputs()
 
 indexpoint = edistance(inpx, inpy, df["width (cm)"], df["height (cm)"])
 
@@ -75,10 +81,29 @@ def edistance10(xwid, yhei , widlist, heilist, label):
     width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
     height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
     distance = pd.Series(np.sqrt(np.add(width, height)))
-    mean = list()
+    minindex = list()
     for _ in range(10):
-        mean.append([distance.argmin, distance[distance.argmin]])
-        distance.drop(distance.argmin) #BÖRJA HÄÄÄÄÄÄRRRRR
-    #return np.argmin(distance)
+        minindex.append(distance.argmin())
+        distance = distance.drop(distance.argmin()) #BÖRJA HÄÄÄÄÄÄRRRRR
+    pichu = 0
+    pikachu = 0
+    print(minindex)
+    for index in minindex:
+        if label[index] == 1:
+            pikachu += 1
+        else:
+            pichu += 1
+    return True if pikachu >= pichu else False
+
+print("Insert dimensions for pokemon calculated for 10 closest neighbor(violette dot):")
+inpx, inpy = inputs()
+
+if edistance10(inpx, inpy, df["width (cm)"], df["height (cm)"], df["(0-pichu 1-pikachu)"]):
+    print("IT IS A PIKACHU")
+else:
+    print("IT IS A PICHU")
+
+plt.scatter(inpx, inpy, c = "purple")
+
 
 plt.show()
