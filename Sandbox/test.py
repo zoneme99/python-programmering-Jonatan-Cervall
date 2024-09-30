@@ -9,8 +9,8 @@ y = pd.Series(np.array([20,10,40]), index = [x for x in range(3)])
 df = pd.DataFrame({'Column1': x, 'Column2': y})
 df = df.sort_values("Column2")
 ff = pd.DataFrame()
-for index, row in df.iterrows():
-    ff = pd.concat([ff, row.to_frame().T])
-    
-print(ff)
+
+print(df)
+print(df.index)
+
  

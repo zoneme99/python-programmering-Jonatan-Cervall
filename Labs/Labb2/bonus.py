@@ -4,13 +4,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
-df = df.sample(frac = 1)
-
-find = 50
-
-#print(df["(0-pichu 1-pikachu)"][3])
-
-def data_seperation(dataframe, to_find):
+def data_separation(dataframe, to_find):
     test_pokemons = pd.DataFrame()
     train_pokemons = pd.DataFrame()
     pikachu = 0
@@ -26,7 +20,39 @@ def data_seperation(dataframe, to_find):
             train_pokemons = pd.concat([train_pokemons, row.to_frame().T])
     return test_pokemons, train_pokemons
 
-test, train = data_seperation(df, find)
+def edistance(xwid, yhei , widlist, heilist):
+    width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
+    height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
+    distance = np.sqrt(np.add(width, height))
+    return widlist.index[np.argmin(distance)]
 
-print(test)
-print(len(train))
+
+df = df.sample(frac = 1)
+
+find = 50
+
+test, train = data_separation(df, find)
+
+TP = 0
+FP = 0
+FN = 0
+TN = 0
+
+for _, row in test.iterrows():
+    index = edistance(row.values[0], row.values[1], train["width (cm)"], train["height (cm)"])
+
+    if int(row.values[2]) == 1 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 1:
+        TP += 1
+    elif int(row.values[2]) == 1 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 0:
+        FP += 1
+    elif int(row.values[2]) == 0 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 1:
+        FN += 1
+    elif int(row.values[2]) == 0 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 0:
+        TN += 1
+    else:
+        print("Value Error?")
+
+print(TP,FP,FN,TN)
+
+plt.pie([TP, FP, FN, TN], labels= ["True Positive", "False Positive", "False Negative", "True Negative"], colors= ["green", "red", "orange", "blue"])
+plt.show()
