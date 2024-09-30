@@ -6,6 +6,8 @@ df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
 df = df.sample(frac = 1)
 
+find = 25
+
 #print(df["(0-pichu 1-pikachu)"][3])
 
 def find_pokemon_index(dataseries, pokemon, to_find):
