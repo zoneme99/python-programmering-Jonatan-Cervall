@@ -4,15 +4,9 @@ import pandas as pd
 import numpy as np
 
 x = pd.Series(np.array([15,5,30]), index = [x for x in range(3)])
-x = x.argmin()
-print(x)
+y = pd.Series(np.array([20,10,40]), index = [x for x in range(3)])
 
-index = list()
-df = pd.read_csv("Labs/datapoints.csv")
-
-width = df["width (cm)"]
-index.append(width.argmin())
-width = width.drop(width.argmin(), axis=0)
-index.append(width.argmin())
-print(index)
-
+df = pd.DataFrame({'Column1': x, 'Column2': y})
+df = df.sort_values("Column2")
+for poke in df.index:
+    print(df["Column2"][poke])

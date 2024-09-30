@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import re
 
-df = pd.read_csv("Labs/datapoints.csv")
+df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
 colors = {1: 'blue', 0: 'orange'}
 color_list = [colors[group] for group in df['(0-pichu 1-pikachu)']]
@@ -13,7 +13,7 @@ plt.scatter(df["width (cm)"],df["height (cm)"], c = color_list)
 
 pattern = re.compile(r'\(([^)]*)\)')
 
-with open("Labs/testpoints.txt", "r") as file:
+with open("Labs/Labb2/testpoints.txt", "r") as file:
     testdata = pattern.findall(file.read())
 
 finedata = list()
@@ -81,18 +81,22 @@ def edistance10(xwid, yhei , widlist, heilist, label):
     width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
     height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
     distance = pd.Series(np.sqrt(np.add(width, height)))
-    minindex = list()
-    for _ in range(10):
-        minindex.append(distance.argmin())
-        distance = distance.drop(distance.argmin()) #BÖRJA HÄÄÄÄÄÄRRRRR
+    dfpoke = pd.DataFrame({'distance': distance, 'pokemon': label})
     pichu = 0
     pikachu = 0
-    print(minindex)
-    for index in minindex:
-        if label[index] == 1:
+    iterations = 0
+    proximity = 10
+    dfpoke = dfpoke.sort_values("distance")
+
+    for index in dfpoke.index:
+        if dfpoke["pokemon"][index] == 1:
             pikachu += 1
         else:
             pichu += 1
+        iterations += 1
+        if iterations == proximity:
+            break
+
     return True if pikachu >= pichu else False
 
 print("Insert dimensions for pokemon calculated for 10 closest neighbor(violette dot):")
