@@ -30,7 +30,7 @@ trues = list()
 falses = list()
 
 for _ in range(10):
-
+    
     df = df.sample(frac = 1)
 
     find = 50

@@ -109,5 +109,6 @@ else:
 
 plt.scatter(inpx, inpy, c = "purple")
 
+plt.legend(["Pichu","Pikachu","Black dot: first prediction","Purple dot: second prediction", "red"])
 
 plt.show()
