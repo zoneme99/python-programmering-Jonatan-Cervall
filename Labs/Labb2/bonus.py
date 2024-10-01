@@ -26,33 +26,40 @@ def edistance(xwid, yhei , widlist, heilist):
     distance = np.sqrt(np.add(width, height))
     return widlist.index[np.argmin(distance)]
 
+trues = list()
+falses = list()
 
-df = df.sample(frac = 1)
+for _ in range(10):
 
-find = 50
+    df = df.sample(frac = 1)
 
-test, train = data_separation(df, find)
+    find = 50
 
-TP = 0
-FP = 0
-FN = 0
-TN = 0
+    test, train = data_separation(df, find)
 
-for _, row in test.iterrows():
-    index = edistance(row.values[0], row.values[1], train["width (cm)"], train["height (cm)"])
+    TP = 0
+    FP = 0
+    FN = 0
+    TN = 0
 
-    if int(row.values[2]) == 1 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 1:
-        TP += 1
-    elif int(row.values[2]) == 1 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 0:
-        FP += 1
-    elif int(row.values[2]) == 0 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 1:
-        FN += 1
-    elif int(row.values[2]) == 0 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 0:
-        TN += 1
-    else:
-        print("Value Error?")
+    for _, row in test.iterrows():
+        index = edistance(row.values[0], row.values[1], train["width (cm)"], train["height (cm)"])
 
-print(TP,FP,FN,TN)
+        if int(row.values[2]) == 1 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 1:
+            TP += 1
+        elif int(row.values[2]) == 1 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 0:
+            FP += 1
+        elif int(row.values[2]) == 0 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 1:
+            FN += 1
+        elif int(row.values[2]) == 0 and int(train["(0-pichu 1-pikachu)"].loc[index]) == 0:
+            TN += 1
+        else:
+            print("Value Error?")
+    trues.append(TP+TN)
+    falses.append(FP+FN)
 
-plt.pie([TP, FP, FN, TN], labels= ["True Positive", "False Positive", "False Negative", "True Negative"], colors= ["green", "red", "orange", "blue"])
+trueoutput = sum(trues)/len(trues)
+falseoutput = sum(falses)/len(falses)
+
+plt.pie([trueoutput, falseoutput], autopct= "%1.1f%%",labels= ["True Prediction", "False Prediction"], colors= ["green", "red"])
 plt.show()
