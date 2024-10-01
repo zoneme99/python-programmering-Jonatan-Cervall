@@ -5,11 +5,13 @@ import re
 
 df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
-colors = {1: 'blue', 0: 'orange'}
-color_list = [colors[group] for group in df['(0-pichu 1-pikachu)']]
 
+pikachu = df.loc[df["(0-pichu 1-pikachu)"] == 1]
+pichu = df.loc[df["(0-pichu 1-pikachu)"] == 0]
 
-plt.scatter(df["width (cm)"],df["height (cm)"], c = color_list)
+plt.scatter(pikachu["width (cm)"],pikachu["height (cm)"], color= "blue")
+plt.scatter(pichu["width (cm)"],pichu["height (cm)"], color= "orange")
+
 
 pattern = re.compile(r'\(([^)]*)\)')
 
@@ -34,10 +36,15 @@ for data in finedata:
     point_index.append(edistance(data[0], data[1], df["width (cm)"], df["height (cm)"]))
 
 
-pokemons = [df["(0-pichu 1-pikachu)"][index] for index in point_index]
+pokemons = [df.loc[index] for index in point_index]
+pokemons = pd.DataFrame(pokemons)
+print(pokemons)
+pikachus = list()
+for poke in pokemons["(0-pichu 1-pikachu)"]:
+    # continue here
+exit()
 
-colors = {1: 'green', 0: 'red'}
-color_list = [colors[group] for group in pokemons]
+
 
 x = [data[0] for data in finedata]
 y = [data[1] for data in finedata]
