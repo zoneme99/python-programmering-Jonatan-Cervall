@@ -38,17 +38,21 @@ for data in finedata:
 
 pokemons = [df.loc[index] for index in point_index]
 pokemons = pd.DataFrame(pokemons)
-print(pokemons)
 pikachus = list()
-for poke in pokemons["(0-pichu 1-pikachu)"]:
-    # continue here
-exit()
+pichus = list()
+for index, poke in enumerate(pokemons["(0-pichu 1-pikachu)"]):
+    if int(poke) == 1:
+        pikachus.append(finedata[index])
+    else:
+        pichus.append(finedata[index])
 
 
-
-x = [data[0] for data in finedata]
-y = [data[1] for data in finedata]
-plt.scatter(x, y, c = color_list)
+xpik = [data[0] for data in pikachus]
+ypik = [data[1] for data in pikachus]
+xpic = [data[0] for data in pichus]
+ypic = [data[1] for data in pichus]
+plt.scatter(xpik, ypik, color = "green")
+plt.scatter(xpic, ypic, color = "red")
 
 for index, data in enumerate(finedata):
     print("Sample with (width, height): ({data0}, {data1}) classified as {pokemon}".format(data0 = data[0], data1 = data[1], pokemon = "Pikachu" if df["(0-pichu 1-pikachu)"][point_index[index]] == 1 else "Pichu"))
@@ -80,8 +84,8 @@ def inputs():
 inpx, inpy = inputs()
 
 indexpoint = edistance(inpx, inpy, df["width (cm)"], df["height (cm)"])
-
-print("IT IS A {pokemon}".format(pokemon = "Pikachu" if df["(0-pichu 1-pikachu)"][indexpoint] == 1 else "Pichu"))
+predict1 = "Pikachu" if df["(0-pichu 1-pikachu)"][indexpoint] == 1 else "Pichu"
+print(f"IT IS A {predict1}")
 plt.scatter(inpx, inpy, c = "black")
 
 def edistance10(xwid, yhei , widlist, heilist, label):
@@ -111,11 +115,13 @@ inpx, inpy = inputs()
 
 if edistance10(inpx, inpy, df["width (cm)"], df["height (cm)"], df["(0-pichu 1-pikachu)"]):
     print("IT IS A PIKACHU")
+    predict10 = "Pikachu"
 else:
     print("IT IS A PICHU")
+    predict10 = "Pichu"
 
 plt.scatter(inpx, inpy, c = "purple")
 
-plt.legend(["Pichu","Pikachu","Black dot: first prediction","Purple dot: second prediction", "red"])
+plt.legend(["Pikachu","Pichu", "Testpoints: Pikachus", "Testpoints: Pichus",f"First Prediction 1 Neighbor({predict1})",f"Second Prediction 10 Neighbors({predict10})"])
 
 plt.show()
