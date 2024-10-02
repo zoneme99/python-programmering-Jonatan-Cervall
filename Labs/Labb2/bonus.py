@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
+#Separerar testpunkter och träningspunkter och returnera dem som separata dataframes
 def data_separation(dataframe, to_find):
     test_pokemons = pd.DataFrame()
     train_pokemons = pd.DataFrame()
@@ -20,17 +21,22 @@ def data_separation(dataframe, to_find):
             train_pokemons = pd.concat([train_pokemons, row.to_frame().T])
     return test_pokemons, train_pokemons
 
+#kopia från labb2.py men lagt till i return en konvertering från index i distance till index i dataframe
+#Pga att jag har slumpade index i dataframe
 def edistance(xwid, yhei , widlist, heilist):
     width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
     height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
     distance = np.sqrt(np.add(width, height))
     return widlist.index[np.argmin(distance)]
 
+# trues == summan av alla true-positive och true-negative, motsvarande falses etc.
 trues = list()
 falses = list()
 
+
 for _ in range(10):
     
+    #slumpar
     df = df.sample(frac = 1)
 
     find = 50
@@ -42,6 +48,7 @@ for _ in range(10):
     FN = 0
     TN = 0
 
+    #Kör igenom testpunkter och räknar alla klassifikationer om det är en true-positve etc.(pikachu = positive, pichu = negative)
     for _, row in test.iterrows():
         index = edistance(row.values[0], row.values[1], train["width (cm)"], train["height (cm)"])
 
@@ -58,6 +65,7 @@ for _ in range(10):
     trues.append(TP+TN)
     falses.append(FP+FN)
 
+#medelvärdet av alla 10 iterationer
 trueoutput = sum(trues)/len(trues)
 falseoutput = sum(falses)/len(falses)
 
