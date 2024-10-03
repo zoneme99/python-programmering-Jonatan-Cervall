@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.ticker import PercentFormatter
 
 df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
@@ -30,9 +31,8 @@ def edistance(xwid, yhei , widlist, heilist):
     return widlist.index[np.argmin(distance)]
 
 # trues == summan av alla true-positive och true-negative, motsvarande falses etc.
-trues = list()
-falses = list()
 
+accuracy = list()
 
 for _ in range(10):
     
@@ -47,7 +47,7 @@ for _ in range(10):
     FP = 0
     FN = 0
     TN = 0
-
+    
     #Kör igenom testpunkter och räknar alla klassifikationer om det är en true-positve etc.(pikachu = positive, pichu = negative)
     for _, row in test.iterrows():
         index = edistance(row.values[0], row.values[1], train["width (cm)"], train["height (cm)"])
@@ -62,12 +62,15 @@ for _ in range(10):
             TN += 1
         else:
             print("Value Error?")
-    trues.append(TP+TN)
-    falses.append(FP+FN)
+    accuracy.append(float((TP+TN)/(TP+TN+FP+FN)))
 
-#medelvärdet av alla 10 iterationer
-trueoutput = sum(trues)/len(trues)
-falseoutput = sum(falses)/len(falses)
-
-plt.pie([trueoutput, falseoutput], autopct= "%1.1f%%",labels= ["True Prediction", "False Prediction"], colors= ["green", "red"])
+#utskrift av data
+fig, axs = plt.subplots(2)
+fig.suptitle('Accuracy on 10 iterations')
+axs[0].bar([x for x in range(1, len(accuracy)+1)], accuracy)
+axs[0].set_xlabel('N - Iterations') 
+axs[0].set_ylabel('Accuracy') 
+axs[0].yaxis.set_major_formatter(PercentFormatter(1))
+axs[1].set_title("Average Accuracy")
+axs[1].pie([np.average(accuracy), 1-np.average(accuracy)], autopct= "%1.1f%%",labels= ["True Prediction", "False Prediction"], colors= ["green", "red"])
 plt.show()
