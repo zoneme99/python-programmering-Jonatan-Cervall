@@ -39,7 +39,7 @@ for data in finedata:
     point_index.append(edistance(data[0], data[1], df["width (cm)"], df["height (cm)"]))
 
 
-#delar upp testpunkter i respektive klass pickahu,pichu
+#delar upp testpunkter i respektive klass pikachu,pichu
 pokemons = [df.loc[index] for index in point_index]
 pokemons = pd.DataFrame(pokemons)
 pikachus = list()
