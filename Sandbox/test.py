@@ -1,5 +1,4 @@
-
-import numpy as np
-y = [1,2,3]
-b = np.random.permutation(y)
-print(b)
+import pandas as pd
+d = pd.Series()
+d = d.add("HEJ")
+print(d)
