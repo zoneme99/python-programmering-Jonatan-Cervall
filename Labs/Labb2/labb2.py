@@ -25,7 +25,7 @@ for data in testdata:
     y = float(temp[1])
     finedata.append([x,y])
 
-#edistance tar in en punk xwid,yhei och tar distansen över resterande punker widlist,heilist
+#edistance tar in en punk xwid,yhei och tar den euclidiska distansen över resterande punker widlist,heilist
 #från listan distance returnerar jag den kortaste distansens index
 def edistance(xwid, yhei , widlist, heilist):
     width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
