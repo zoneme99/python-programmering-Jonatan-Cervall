@@ -42,5 +42,5 @@ def run(k, m):
     plt.show()
 
     #kapslat in koden i funktioner för att användas i jupyter notebooks
-    #run()
+    #run(-1, 0)
 
