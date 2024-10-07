@@ -25,6 +25,8 @@ class line:
             return labelled
         else:
             raise ValueError("first and second argument must have same length")
+    def save_dataframe(self, path):
+        self.df.to_csv(path, index=False)
     def display(self):
         left = self.df[self.df["label"] == 0]
         right = self.df[self.df["label"] == 1]
@@ -38,6 +40,7 @@ class line:
 
 if __name__ == '__main__':
     line1 = line(-1, 0, "Labs/Labb3/unlabelled_data.csv")
+    line1.save_dataframe("labelled_data.csv")
     line1.display()
 
 
