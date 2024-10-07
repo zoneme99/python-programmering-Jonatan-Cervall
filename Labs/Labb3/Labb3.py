@@ -35,7 +35,7 @@ class line:
         plt.plot([x for x in range(-5,6)], [self.k*x + self.m for x in range(-5,6)], color = color)
         plt.xlim(-5,5)
         plt.ylim(-5,5)
-        plt.legend(["Beneath Line", "Above Line"])
+        plt.legend(["Left", "Right"])
 
 if __name__ == '__main__':
     line1 = line(-1, 0, "Labs/Labb3/unlabelled_data.csv")
