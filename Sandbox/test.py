@@ -1,4 +1,7 @@
-import pandas as pd
-d = pd.DataFrame({"col1":[1,2,3,4], "col2":[4,5,6,7]})
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(-100,100,100)
+y = [y**2 for y in x]
 
-print(d.iloc[0])
+plt.plot(x,y)
+plt.show()
