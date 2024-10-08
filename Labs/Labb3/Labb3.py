@@ -38,6 +38,7 @@ class line:
         plt.ylim(-5,5)
         plt.legend(["Left", "Right"])
 
+#Printar ut min linje och sparar datapunkter med klasser i labelled_data.cdv
 if __name__ == '__main__':
     line1 = line(-1, 0, "Labs/Labb3/unlabelled_data.csv")
     line1.save_dataframe("labelled_data.csv")
