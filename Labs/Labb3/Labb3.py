@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+#Klassen line har k och m värden för räta linjens ekvation. Även en dataframe som är klassificerad.
 class line:
     def __init__(self, k, m, path_to_data):
         self.k = k
