@@ -1,8 +1,13 @@
-nums = {'a' : 2, 'b' : 2, 'c' : 3, 'd' : 1}
+import sys
+print(sys.path)
+exit()
 
-print(min(nums, key = nums.get))
-print(min(nums, key = nums.values))
+import function_class_saves.functions as fu
 
-#print(nums.get('a'))
 
-#print(min(nums))
+
+num, denom = fu.dec_to_frac(1.25)
+
+print(f"{num}/{denom}")
+
+
