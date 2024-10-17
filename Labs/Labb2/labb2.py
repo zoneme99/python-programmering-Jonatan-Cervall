@@ -32,8 +32,8 @@ for data in testdata:
 #edistance tar in en punk xwid,yhei och tar den euclidiska distansen över resterande punker widlist,heilist
 #från listan distance returnerar jag den kortaste distansens index
 def edistance(xwid, yhei , widlist, heilist):
-    width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
-    height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
+    width = np.array(list(map(lambda x: np.power(x - xwid, 2), widlist)))
+    height = np.array(list(map(lambda x: np.power(x - yhei, 2), heilist)))
     distance = np.sqrt(np.add(width, height))
     return np.argmin(distance)
 
@@ -105,8 +105,8 @@ plt.scatter(inpx, inpy, c = "black")
 #Sedan loopar den igenom 10 ggr och majoriteten av de 10 klassifierar den som
 #Pikachu == True, Pichu == False
 def edistance10(xwid, yhei , widlist, heilist, label):
-    width = np.array(list(map(lambda x: np.pow(x - xwid, 2), widlist)))
-    height = np.array(list(map(lambda x: np.pow(x - yhei, 2), heilist)))
+    width = np.array(list(map(lambda x: np.power(x - xwid, 2), widlist)))
+    height = np.array(list(map(lambda x: np.power(x - yhei, 2), heilist)))
     distance = pd.Series(np.sqrt(np.add(width, height)))
     dfpoke = pd.DataFrame({'distance': distance, 'pokemon': label})
     pichu = 0
