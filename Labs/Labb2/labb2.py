@@ -2,7 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
-
+# datan i datapoints.txt är inte lämplig att läsa direkt med read_csv. Du borde använda skipirows=1
+# för att slippa följande datamangling. Koden som korrigerar filen och skriver till csv borde inkluderas.
+# den är dock överflödig och behövs inte.
 df = pd.read_csv("Labs/Labb2/datapoints.csv")
 
 
@@ -13,7 +15,7 @@ pichu = df.loc[df["(0-pichu 1-pikachu)"] == 0]
 plt.scatter(pikachu["width (cm)"],pikachu["height (cm)"], color= "blue")
 plt.scatter(pichu["width (cm)"],pichu["height (cm)"], color= "orange")
 
-
+# Borde vara en funktion för modularitet
 #Tar datan ifrån testpoints.txt och lägger det i lämplig datastruktur finedata
 pattern = re.compile(r'\(([^)]*)\)')
 with open("Labs/Labb2/testpoints.txt", "r") as file:
@@ -24,7 +26,9 @@ for data in testdata:
     x = float(temp[0])
     y = float(temp[1])
     finedata.append([x,y])
-
+    
+# Nedanstående funktion är onödigt komplicerad. Den ger inte tillbaka euklidiska avstånd, så funktionen borde heta
+# min_edist_index eller linkande
 #edistance tar in en punk xwid,yhei och tar den euclidiska distansen över resterande punker widlist,heilist
 #från listan distance returnerar jag den kortaste distansens index
 def edistance(xwid, yhei , widlist, heilist):
@@ -93,6 +97,9 @@ indexpoint = edistance(inpx, inpy, df["width (cm)"], df["height (cm)"])
 predict1 = "Pikachu" if df["(0-pichu 1-pikachu)"][indexpoint] == 1 else "Pichu"
 print(f"IT IS A {predict1}")
 plt.scatter(inpx, inpy, c = "black")
+
+# funktionen borde ta en parameter k för antalet punkter den klassifierar mot, och samma funktion
+# borde användas i båda fallen, fast med olika k värde.
 
 #edistance10 fungerar som edistance men sorterar en dataframe med lägsta distans längst upp
 #Sedan loopar den igenom 10 ggr och majoriteten av de 10 klassifierar den som
