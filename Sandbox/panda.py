@@ -10,10 +10,10 @@ import math
 # df = df.set_index('hej')
 # print(df.head(5))
 
-
-def derive_function(func):
+def derivative_func(func, x):
     """
-    Derive a function and return the derived function
+    Derive a function with speicific x
+    and return value
     
     Parameters
     ----------
@@ -25,16 +25,25 @@ def derive_function(func):
     derived_func : function
         The derived function
     """
-    def derived_func(x):
-        h = 1e-8
-        return (func(x+h) - func(x-h)) / (2*h)
-    return derived_func
+    h = 1e-10
+    return ((func(x+h) - func(x)) / h) 
     
 def func(x):
-    return math.pow(x, 3)
+    return math.pow(x, 2)
 
 
-func = derive_function(func)
+x = [x for x in range(1,101)]
 
-print(func(2))
-print(1e-1)
+data = [derivative_func(func, dx) for dx in x]
+print(data)
+count = 0
+counter = list()
+for parse in data:
+    for char in str(parse).split(".")[-1]:
+        if char == '0' or char == '9':
+            count += 1
+        else:
+            counter.append(count)
+            count = 0
+            break
+print(counter)
