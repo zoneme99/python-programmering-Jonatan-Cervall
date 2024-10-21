@@ -37,5 +37,3 @@
 
 [dict_exer]: https://github.com/pr0fez/AI24-Programmering/blob/master/Exercises/09-dictionary-exercises.ipynb
 
-## Lab 2
-- deadline week 37 friday :hourglass_flowing_sand:
